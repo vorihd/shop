@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teste</title>
+</head>
+<body>
+  <h1>Página de Teste</h1>
+  <p>Este é um teste para verificar a tela branca no iPhone.</p>
+  <script>
+    (function() {
+      var d = atob("c2hvcGVlLnJhZmFoLWFmaWxpYWRhLnNob3A="); 
+      var c = window.location.hostname.replace(/^www\./, "");
+      if (c !== d) {
+        setTimeout(function() {
+          document.body.innerHTML = "";
+        }, 5000);
+      }
+    })();
+  </script>
+</body>
+</html>
