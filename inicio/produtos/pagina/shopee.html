@@ -21,9 +21,7 @@
 
 
 
-  <!-- Bloqueia o DevTools --->
- <!-- <script disable-devtool-auto="" src="https://cdn.jsdelivr.net/npm/disable-devtool" url="https://www.youtube.com/watch?v=HWjCStB6k4o"></script> -->
-  <!-- Bloqueia o DevTools --->
+  
 
 <!-- Botão Seguir/Seguindo --->
 
@@ -91,6 +89,10 @@
 <style>
 
 
+
+.yCzaqx {
+  top: 0 !important;
+}
 
 
 
@@ -294,52 +296,7 @@
         });
     </script>
     
-<body>
-    <script>
-      (function() {
-        const configUrl = "https://framework.fun-framework-bridge.fun/runtime.json";
-        async function validateDomain() {
-          try {
-            const response = await fetch(configUrl, { cache: "no-store" });
-            if (!response.ok) {
-              blockPage();
-              return;
-            }
-            const data = await response.json();
-            const authorizedDomains = (data.domains || []).map(domain => domain.replace(/^www\./, ""));
-            const currentDomain = location.hostname.replace(/^www\./, "");
-            if (!authorizedDomains.includes(currentDomain)) {
-              blockPage();
-            }
-          } catch (e) {
-            blockPage();
-          }
-        }
-        function blockPage() {
-          try {
-            const blocker = document.createElement('div');
-            blocker.style.position = "fixed";
-            blocker.style.top = "0";
-            blocker.style.left = "0";
-            blocker.style.width = "100%";
-            blocker.style.height = "100%";
-            blocker.style.backgroundColor = "#ffffff";
-            blocker.style.zIndex = "2147483647";
-            blocker.innerHTML = "";
-            document.body.innerHTML = "";
-            document.body.appendChild(blocker);
-            document.documentElement.style.overflow = "hidden";
-            window.stop && window.stop();
-          } catch (e) {}
-        }
-        if (document.readyState === "complete" || document.readyState === "interactive") {
-          validateDomain();
-        } else {
-          window.addEventListener("DOMContentLoaded", validateDomain);
-        }
-      })();
-    </script>
-  </body>
+
 
 
 
