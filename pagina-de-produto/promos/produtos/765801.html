@@ -2239,24 +2239,23 @@ document.addEventListener("DOMContentLoaded", function() {
 <style>
 .variation-container {
   display: flex;
-  gap: 12px;
+  gap: 8px; /* deixei um pouco menor para caber mais */
   background: white;
   padding: 0;
   margin: 0;
-  justify-content: flex-start;
-  flex-wrap: nowrap; /* <-- aqui o segredo para não quebrar linha */
-  overflow-x: auto;   /* <-- permite que deslize na horizontal se for necessário */
-  -webkit-overflow-scrolling: touch; /* deslize suave no celular */
+  justify-content: center;
+  flex-wrap: wrap; /* agora volta a permitir "quebrar" apenas se necessário */
 }
 
 .variation-wrapper {
   position: relative;
-  flex: 0 0 auto; /* <-- impede que as imagens encolham */
+  flex: 0 1 auto; /* permite que o item diminua de tamanho se precisar */
 }
 
 .variation-image {
-  width: 65px;
-  height: 65px;
+  width: 60px;
+  height: 60px;
+  max-width: 20vw; /* vai encolhendo no celular */
   object-fit: cover;
   border-radius: 12px;
   border: 2px solid transparent;
@@ -2324,6 +2323,7 @@ document.addEventListener("DOMContentLoaded", function() {
   cursor: pointer;
 }
 </style>
+
 
 <!-- SCRIPT -->
 <script>
