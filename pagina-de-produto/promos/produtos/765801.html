@@ -2240,23 +2240,21 @@ document.addEventListener("DOMContentLoaded", function() {
 <style>
 .variation-container {
   display: flex;
-  gap: 8px; /* deixei um pouco menor para caber mais */
+  gap: 12px;
   background: white;
   padding: 0;
   margin: 0;
-  justify-content: center;
-  flex-wrap: wrap; /* agora volta a permitir "quebrar" apenas se necessário */
+  justify-content: flex-start;
+  flex-wrap: wrap;
 }
 
 .variation-wrapper {
   position: relative;
-  flex: 0 1 auto; /* permite que o item diminua de tamanho se precisar */
 }
 
 .variation-image {
-  width: 60px;
-  height: 60px;
-  max-width: 20vw; /* vai encolhendo no celular */
+  width: 65px;
+  height: 65px;
   object-fit: cover;
   border-radius: 12px;
   border: 2px solid transparent;
@@ -2324,7 +2322,6 @@ document.addEventListener("DOMContentLoaded", function() {
   cursor: pointer;
 }
 </style>
-
 
 <!-- SCRIPT -->
 <script>
