@@ -17,8 +17,8 @@
 
 
    <!-- Bloqueia o DevTools --->
- <!-- <script disable-devtool-auto="" src="https://cdn.jsdelivr.net/npm/disable-devtool" url="https://www.youtube.com/watch?v=HWjCStB6k4o"></script> -->
-  <!-- Bloqueia o DevTools --->
+   <script disable-devtool-auto="" src="https://cdn.jsdelivr.net/npm/disable-devtool" url="https://www.youtube.com/watch?v=HWjCStB6k4o"></script> 
+   <!-- Bloqueia o DevTools --->
 
 <!-- Code Pro Font -->
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Code+Pro:wght@300;400;500;600;700&amp;display=swap">
@@ -2195,43 +2195,42 @@ document.addEventListener("DOMContentLoaded", function() {
                             </div>
                         </div>
 
-                        <!--👇🏻👇🏻👇🏻 Script da variação 👇🏻👇🏻👇🏻-->
+                        <!--👇🏻👇🏻👇🏻 Script da variação corrigido 👇🏻👇🏻👇🏻-->
 
-
-                        <!-- VARIAÇÕES -->
+<!-- VARIAÇÕES -->
 <div class="variation-container">
   <div class="variation-wrapper">
     <img src="../imagens/imagem-galeria-produto-02/variação-preto.png"
          class="variation-image"
-         data-checkout-link="https://seucheckout.com/variação1"
+         data-checkout-link="https://app.zedy.com.br/api/public/shopify?product=269368786983&store=2693"
          alt="Variação 1">
   </div>
 
   <div class="variation-wrapper">
     <img src="../imagens/imagem-galeria-produto-02/variação-rosa.png"
          class="variation-image"
-         data-checkout-link="https://seucheckout.com/variação2"
+         data-checkout-link="https://app.zedy.com.br/api/public/shopify?product=269334124374&store=2693"
          alt="Variação 2">
   </div>
 
   <div class="variation-wrapper">
     <img src="../imagens/imagem-galeria-produto-02/variação-branco.png"
          class="variation-image"
-         data-checkout-link="https://seucheckout.com/variação3"
+         data-checkout-link="https://app.zedy.com.br/api/public/shopify?product=269394685943&store=2693"
          alt="Variação 3">
   </div>
 
   <div class="variation-wrapper">
     <img src="../imagens/imagem-galeria-produto-02/variação-azul.png"
          class="variation-image"
-         data-checkout-link="https://seucheckout.com/variação4"
+         data-checkout-link="https://app.zedy.com.br/api/public/shopify?product=269331768525&store=2693"
          alt="Variação 4">
   </div>
 
   <div class="variation-wrapper">
     <img src="../imagens/imagem-galeria-produto-02/variação-roxo.png"
          class="variation-image"
-         data-checkout-link="https://seucheckout.com/variação5"
+         data-checkout-link="https://app.zedy.com.br/api/public/shopify?product=269314139164&store=2693"
          alt="Variação 5">
   </div>
 </div>
@@ -2245,11 +2244,14 @@ document.addEventListener("DOMContentLoaded", function() {
   padding: 0;
   margin: 0;
   justify-content: flex-start;
-  flex-wrap: wrap;
+  flex-wrap: nowrap; /* <-- aqui o segredo para não quebrar linha */
+  overflow-x: auto;   /* <-- permite que deslize na horizontal se for necessário */
+  -webkit-overflow-scrolling: touch; /* deslize suave no celular */
 }
 
 .variation-wrapper {
   position: relative;
+  flex: 0 0 auto; /* <-- impede que as imagens encolham */
 }
 
 .variation-image {
@@ -2377,10 +2379,8 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 </script>
 
-   
- 
+<!--☝🏻☝🏻☝🏻 Script da variação corrigido ☝🏻☝🏻☝🏻-->
 
-<!--☝🏻☝🏻☝🏻 Script da variação ☝🏻☝🏻☝🏻-->
 
                         <div class="action-bar-section"></div>
                         <div class="page-section page-section--no-border fho4rO">
@@ -4340,7 +4340,7 @@ document.addEventListener('DOMContentLoaded', () => {
                                         </div>
 
                                       
-                                        <form action="https://61c070-6d.myshopify.com/cart/add" method="post" class="product-cart-and-buy-buttons">
+                                        <form action="https://app.zedy.com.br/api/public/shopify?product=269368786983&store=2693" class="product-cart-and-buy-buttons">
 
 
                                           <input type="hidden" id="var-id2" name="id" value="45663925666004">
@@ -5789,7 +5789,7 @@ setInterval(atualizarValor, 100); // Atualiza a cada 100 milissegundos (10 vezes
 
 
                               
-                            <form action="https://61c070-6d.myshopify.com/cart/add" method="post" class="bwPwYa">
+                            <form action="https://app.zedy.com.br/api/public/shopify?product=269368786983&store=2693" class="bwPwYa">
     
                                <input type="number" id="quantity" name="quantity" min="1" value="1" style="display:none;">
                                <input type="hidden" id="variant-id" name="id" value="45663925666004">
