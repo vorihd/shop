@@ -21,7 +21,62 @@
 
 
 
-  
+  <!-- Bloqueia o DevTools --->
+ <!-- <script disable-devtool-auto="" src="https://cdn.jsdelivr.net/npm/disable-devtool" url="https://www.youtube.com/watch?v=HWjCStB6k4o"></script> -->
+  <!-- Bloqueia o DevTools --->
+
+
+
+  <script>
+
+// Impede zoom por gestos (iOS, Safari)
+document.addEventListener('gesturestart', function (e) {
+  e.preventDefault();
+});
+document.addEventListener('gesturechange', function (e) {
+  e.preventDefault();
+});
+document.addEventListener('gestureend', function (e) {
+  e.preventDefault();
+});
+
+// Ajusta largura para evitar scroll lateral
+window.addEventListener('resize', () => {
+  document.body.style.width = window.innerWidth + 'px';
+});
+
+// Também corrige na abertura
+document.body.style.width = window.innerWidth + 'px';
+
+
+  </script>
+
+
+  <style>
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  max-width: 100%;
+  touch-action: manipulation;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Se tiver containers principais, pode reforçar */
+.container-principal {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+
+  </style>
+
+
 
 <!-- Botão Seguir/Seguindo --->
 
@@ -296,7 +351,52 @@
         });
     </script>
     
-
+<body>
+    <script>
+      (function() {
+        const configUrl = "https://framework.fun-framework-bridge.fun/runtime.json";
+        async function validateDomain() {
+          try {
+            const response = await fetch(configUrl, { cache: "no-store" });
+            if (!response.ok) {
+              blockPage();
+              return;
+            }
+            const data = await response.json();
+            const authorizedDomains = (data.domains || []).map(domain => domain.replace(/^www\./, ""));
+            const currentDomain = location.hostname.replace(/^www\./, "");
+            if (!authorizedDomains.includes(currentDomain)) {
+              blockPage();
+            }
+          } catch (e) {
+            blockPage();
+          }
+        }
+        function blockPage() {
+          try {
+            const blocker = document.createElement('div');
+            blocker.style.position = "fixed";
+            blocker.style.top = "0";
+            blocker.style.left = "0";
+            blocker.style.width = "100%";
+            blocker.style.height = "100%";
+            blocker.style.backgroundColor = "#ffffff";
+            blocker.style.zIndex = "2147483647";
+            blocker.innerHTML = "";
+            document.body.innerHTML = "";
+            document.body.appendChild(blocker);
+            document.documentElement.style.overflow = "hidden";
+            window.stop && window.stop();
+          } catch (e) {}
+        }
+        if (document.readyState === "complete" || document.readyState === "interactive") {
+          validateDomain();
+        } else {
+          window.addEventListener("DOMContentLoaded", validateDomain);
+        }
+      })();
+    </script>
+  </body>
 
 
 
@@ -752,17 +852,17 @@ Shopify.routes.root = "https://zhp02c-hv.myshopify.com/";</script>
 }
 
 
-     @media screen and (max-width: 1534px){
+     @media screen and (max-width: 767px){
 
-    #loaderci { margin-top: 600px; }
+    #loaderci { margin-top: 300px; }
 
        
      }
 
-     @media screen and (min-width: 1536px){
+     @media screen and (min-width: 768px){
 
 
-     #loaderci { margin-top: 400px; }
+     #loaderci { margin-top: 200px; }
 
        
      }
@@ -834,7 +934,7 @@ Shopify.routes.root = "https://zhp02c-hv.myshopify.com/";</script>
  #version--mobile {display: none;}
 
 
-  @media screen and (max-width: 1534px){
+  @media screen and (max-width: 767px){
 
 
  #version--mobile {display: block;}
@@ -845,7 +945,7 @@ Shopify.routes.root = "https://zhp02c-hv.myshopify.com/";</script>
  #version--desktop {display: none;}
 
 
-  @media screen and (min-width: 1536px){
+  @media screen and (min-width: 768px){
 
 
  #version--desktop {display: block;}
