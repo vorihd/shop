@@ -2195,10 +2195,9 @@ document.addEventListener("DOMContentLoaded", function() {
                             </div>
                         </div>
 
-                        <!--👇🏻👇🏻👇🏻 Script da variação 👇🏻👇🏻👇🏻-->
+                        <!--👇🏻👇🏻👇🏻 Script da variação corrigido 👇🏻👇🏻👇🏻-->
 
-
-                        <!-- VARIAÇÕES -->
+<!-- VARIAÇÕES -->
 <div class="variation-container">
   <div class="variation-wrapper">
     <img src="../imagens/imagem-galeria-produto-02/variação-preto.png"
@@ -2240,21 +2239,23 @@ document.addEventListener("DOMContentLoaded", function() {
 <style>
 .variation-container {
   display: flex;
-  gap: 12px;
+  gap: 8px; /* deixei um pouco menor para caber mais */
   background: white;
   padding: 0;
   margin: 0;
-  justify-content: flex-start;
-  flex-wrap: wrap;
+  justify-content: center;
+  flex-wrap: wrap; /* agora volta a permitir "quebrar" apenas se necessário */
 }
 
 .variation-wrapper {
   position: relative;
+  flex: 0 1 auto; /* permite que o item diminua de tamanho se precisar */
 }
 
 .variation-image {
-  width: 65px;
-  height: 65px;
+  width: 60px;
+  height: 60px;
+  max-width: 20vw; /* vai encolhendo no celular */
   object-fit: cover;
   border-radius: 12px;
   border: 2px solid transparent;
@@ -2323,6 +2324,7 @@ document.addEventListener("DOMContentLoaded", function() {
 }
 </style>
 
+
 <!-- SCRIPT -->
 <script>
 document.addEventListener("DOMContentLoaded", () => {
@@ -2361,12 +2363,12 @@ document.addEventListener("DOMContentLoaded", () => {
     const overlay = document.createElement("div");
     overlay.className = "popup-overlay";
 
-    overlay.innerHTML = 
+    overlay.innerHTML = `
       <div class="popup-box">
         <p>Por favor, selecione uma variação de cor antes de continuar.</p>
         <button>OK</button>
       </div>
-    ;
+    `;
 
     overlay.querySelector("button").addEventListener("click", () => {
       overlay.remove();
@@ -2377,10 +2379,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 </script>
 
-   
- 
-
-<!--☝🏻☝🏻☝🏻 Script da variação ☝🏻☝🏻☝🏻-->
+<!--☝🏻☝🏻☝🏻 Script da variação corrigido ☝🏻☝🏻☝🏻-->
 
 
                         <div class="action-bar-section"></div>
