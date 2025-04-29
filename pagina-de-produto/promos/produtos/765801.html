@@ -16,6 +16,56 @@
 
 
 
+ <!-- ✅ PRELOADER  -->
+ <div id="preloader">
+  <!-- 🖼️ Troque a URL abaixo pelo seu GIF de carregamento -->
+  <img src="carregamento.gif" alt="Carregando...">
+</div>
+
+<style>
+  /* ✅ PRELOADER CSS */
+  #preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #ffffff; /* 🎨 Cor de fundo durante o carregamento */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* 🔝 Fica acima de tudo */
+    transition: opacity 0.5s ease, visibility 0.5s ease; /* ⏳ Suavidade ao esconder */
+  }
+
+  #preloader img {
+    width: 120px; /* 🖼️ Tamanho do seu GIF */
+    height: auto;
+  }
+</style>
+
+<script>
+  // ✅ SCRIPT DE PRELOADER
+  window.addEventListener('load', function () {
+    const preloader = document.getElementById('preloader');
+    
+    // ⏱️ Tempo extra antes de esconder (em milissegundos)
+    const tempoExtra = 10000; // Ex: 300 = 0.3 segundos
+
+    // Aplica o fade-out
+    setTimeout(() => {
+      preloader.style.opacity = '0';
+      preloader.style.visibility = 'hidden';
+
+      // ⏳ Aguarda a transição para remover do DOM
+      setTimeout(() => {
+        if (preloader) preloader.remove();
+      }, 500); // ⌛ Duração da transição (deve combinar com o CSS)
+    }, tempoExtra);
+  });
+</script>
+<!-- ✅ PRELOADER  -->
+
    <!-- Bloqueia o DevTools --->
    <script disable-devtool-auto="" src="https://cdn.jsdelivr.net/npm/disable-devtool" url="https://www.youtube.com/watch?v=HWjCStB6k4o"></script> 
    <!-- Bloqueia o DevTools --->
