@@ -2724,7 +2724,7 @@ document.addEventListener("DOMContentLoaded", function() {
     Com o <strong>Escorredor de Louças Suspenso Grande</strong>, você resolve esse problema de forma simples e eficiente. Ele elimina a bagunça da bancada e te dá mais liberdade para aproveitar seu espaço da melhor maneira.
   </p>
   <div style="text-align: center; margin-bottom: 30px;">
-    <a href="https://seguro.shopee-finaliza-pedido.shop/checkout/Z-28GGC04BNS25" style="display: inline-block; background: #FF5722; color: #fff; padding: 12px 25px; font-size: 16px; text-decoration: none; border-radius: 5px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); transition: background 0.3s ease;" onmouseover="this.style.background='#FFC107'; this.style.color='#FF5722';" onmouseout="this.style.background='#FF5722'; this.style.color='#fff';">Comprar Produto Agora!✅</a>
+    <a href="https://app.zedy.com.br/api/public/shopify?product=269337758814&store=2693" style="display: inline-block; background: #FF5722; color: #fff; padding: 12px 25px; font-size: 16px; text-decoration: none; border-radius: 5px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); transition: background 0.3s ease;" onmouseover="this.style.background='#FFC107'; this.style.color='#FF5722';" onmouseout="this.style.background='#FF5722'; this.style.color='#fff';">Comprar Produto Agora!✅</a>
   </div>
   <!-- Divisor Estilizado com Animação -->
   <hr style="border: none; height: 2px; background: linear-gradient(to right, #FF5722, #FFC107); margin: 30px 0; animation: gradient-animation 3s infinite;">
@@ -4164,57 +4164,50 @@ document.addEventListener('DOMContentLoaded', () => {
                                         </div>
 
                                       
-                                        <form action="https://seguro.shopee-finaliza-pedido.shop/checkout/Z-28GIL04VAZ25" class="product-cart-and-buy-buttons">
+                                        <div class="product-cart-and-buy-buttons">
+  <input type="hidden" id="var-id2" value="45663925666004">
+  <input type="number" id="quantity2" min="1" value="1" style="display:none;">
 
-
-                                          <input type="hidden" id="var-id2" name="id" value="45663925666004">
-                                          <input type="number" name="quantity" min="1" value="1" style="display:none;">
-                                          
-                                           <!---------------------->
-
-
-
-
-                                                    <div class="product-bottom-panel__add-to-cart">
-<button type="submit" style=" width: 100%; border: none; height: 100%; background: #00bfa5; ">
-    <svg enable-background="new 0 0 15 15" viewBox="0 0 15 15" role="img"
+  <div class="product-bottom-panel__add-to-cart">
+    <button type="button" onclick="goToZedyCheckoutAlt()" style="width: 100%; border: none; height: 100%; background: #00bfa5;">
+      <svg enable-background="new 0 0 15 15" viewBox="0 0 15 15" role="img"
         class="stardust-icon stardust-icon-add-to-cart product-bottom-panel__add-to-cart-icon">
         <path d="m .5.5h2.2l2.5 10.5h7.2l2.1-7.5h-10.8" fill="none" stroke-linecap="round" stroke-linejoin="round"
-            stroke-miterlimit="10"></path>
+          stroke-miterlimit="10"></path>
         <circle cx="6" cy="13.5" r="1"></circle>
         <circle cx="11.5" cy="13.5" r="1"></circle>
         <path d="m7.5 7h3" fill="none" stroke-linecap="round" stroke-miterlimit="10"></path>
         <path d="m9 8.5v-3" fill="none" stroke-linecap="round" stroke-miterlimit="10"></path>
-    </svg>
-    <div class="product-bottom-panel__add-to-cart-text"><span class="">Adicionar ao carrinho</span></div>
-</button>
+      </svg>
+      <div class="product-bottom-panel__add-to-cart-text"><span class="">Adicionar ao carrinho</span></div>
+    </button>
+  </div>
+
+  <div class="product-bottom-panel__buy-now">
+    <button type="button" onclick="goToZedyCheckoutAlt()" style="width: 100%; border: none; height: 100%; background: #ee4d2d;">Compre agora</button>
+  </div>
 </div>
 
+<!-- Script único para os dois blocos -->
+<script>
+  const baseURL = "https://app.zedy.com.br/api/public/shopify";
+  const productID = "269337758814";
+  const storeID = "2693";
 
+  function goToZedyCheckout() {
+    const variant = document.getElementById("variant-id").value;
+    const quantity = document.getElementById("quantity").value || 1;
+    const finalURL = `${baseURL}?product=${productID}&store=${storeID}&id=${variant}&quantity=${quantity}`;
+    window.location.href = finalURL;
+  }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                                          
-
-                                          
-                                            <div type="submit" class="product-bottom-panel__buy-now">
-                                              
-                                             <button type="submit" style=" width: 100%; border: none; height: 100%; background: #ee4d2d; ">Compre agora</button>
-                                            
-                                            </div>
-                                        </form>
+  function goToZedyCheckoutAlt() {
+    const variant = document.getElementById("var-id2").value;
+    const quantity = document.getElementById("quantity2").value || 1;
+    const finalURL = `${baseURL}?product=${productID}&store=${storeID}&id=${variant}&quantity=${quantity}`;
+    window.location.href = finalURL;
+  }
+</script>
 
 
                                       
@@ -5642,18 +5635,18 @@ setInterval(atualizarValor, 100); // Atualiza a cada 100 milissegundos (10 vezes
 
 
                               
-                            <form action="https://seguro.shopee-finaliza-pedido.shop/checkout/Z-28GIL04VAZ25" class="bwPwYa">
-    
-                               <input type="number" id="quantity" name="quantity" min="1" value="1" style="display:none;">
-                               <input type="hidden" id="variant-id" name="id" value="45663925666004">
-    
-                              <button type="submit" class="btn btn-tinted btn--l YuENex a_JvBi" aria-disabled="false">
-                               <img alt="icon-add-to-cart" class="_kL9Hf" src="https://deo.shopeemobile.com/shopee/shopee-pcmall-live-sg/productdetailspage/0f3bf6e431b6694a9aac.svg">
-                              <span>Adicionar ao carrinho</span>
-                                </button>
-    
-                             <button type="submit" class="btn btn-solid-primary btn--l YuENex" aria-disabled="false">Comprar agora</button>
-                             </form>
+<div class="bwPwYa">
+  <input type="number" id="quantity" min="1" value="1" style="display:none;">
+  <input type="hidden" id="variant-id" value="45663925666004">
+
+  <button type="button" class="btn btn-tinted btn--l YuENex a_JvBi" onclick="goToZedyCheckout()">
+    <img alt="icon-add-to-cart" class="_kL9Hf"
+      src="https://deo.shopeemobile.com/shopee/shopee-pcmall-live-sg/productdetailspage/0f3bf6e431b6694a9aac.svg">
+    <span>Adicionar ao carrinho</span>
+  </button>
+
+  <button type="button" class="btn btn-solid-primary btn--l YuENex" onclick="goToZedyCheckout()">Comprar agora</button>
+</div>
 
                             </div>
                         </div>
