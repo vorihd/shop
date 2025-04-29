@@ -27,7 +27,31 @@
 
 <!-- Botão Seguir/Seguindo --->
 
+<style>
+    
+    #followBtn {
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
 
+#followBtn span {
+  display: inline-block;
+  transition: opacity 0.3s ease;
+}
+
+#followBtn span.fade-out {
+  opacity: 0;
+}
+
+#followBtn.following {
+  background-color: green;
+  color: white;
+  border-color: green;
+}
+
+    
+    </style>
     
     
     <script>
@@ -67,10 +91,6 @@
 <style>
 
 
-
-.yCzaqx {
-  top: 0 !important;
-}
 
 
 
